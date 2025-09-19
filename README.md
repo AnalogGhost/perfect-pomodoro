@@ -39,8 +39,8 @@ A beautiful and customizable desktop Pomodoro timer built with Electron. Feature
 
 ### Setup
 ```bash
-git clone https://github.com/AnalogGhost/pomodoro-timer.git
-cd pomodoro-timer
+git clone https://github.com/AnalogGhost/perfect-pomodoro.git
+cd perfect-pomodoro
 npm install
 ```
 
