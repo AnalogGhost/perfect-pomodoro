@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Perfect Pomodoro</h1>
+
+        <div class="timer-display">
+            <div class="time" id="timeDisplay">25:00</div>
+            <div class="session-type" id="sessionType">Work Session</div>
+            <div class="session-name" id="sessionName">General Work</div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn primary">Start</button>
+            <button id="pauseBtn" class="btn secondary" disabled>Pause</button>
+            <button id="resetBtn" class="btn secondary">Reset</button>
+        </div>
+
+        <div class="settings">
+            <div class="setting-group">
+                <label for="sessionNameInput">Session Name:</label>
+                <input type="text" id="sessionNameInput" value="General Work" placeholder="e.g., Checking Email, Writing Report">
+            </div>
+
+            <div class="setting-group">
+                <label for="savedSessions">Saved Sessions:</label>
+                <select id="savedSessions">
+                    <option value="">Select a saved session...</option>
+                </select>
+                <div class="button-group">
+                    <button id="saveSessionBtn" class="btn secondary small">Save</button>
+                    <button id="deleteSessionBtn" class="btn secondary small">Delete</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label for="workDuration">Work Duration (minutes):</label>
+                <input type="number" id="workDuration" value="25" min="1" max="60">
+            </div>
+
+            <div class="setting-group">
+                <label for="shortBreak">Short Break (minutes):</label>
+                <input type="number" id="shortBreak" value="5" min="1" max="30">
+            </div>
+
+            <div class="setting-group">
+                <label for="longBreak">Long Break (minutes):</label>
+                <input type="number" id="longBreak" value="15" min="1" max="60">
+            </div>
+
+            <div class="setting-group">
+                <label for="sessionsUntilLongBreak">Sessions until long break:</label>
+                <input type="number" id="sessionsUntilLongBreak" value="4" min="1" max="10">
+            </div>
+        </div>
+
+        <div class="progress">
+            <div class="session-counter">
+                Session: <span id="sessionCount">1</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <button id="openHistoryBtn" class="btn secondary">📊 View History</button>
+            <button id="openSettingsBtn" class="btn secondary">⚙️ Settings</button>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

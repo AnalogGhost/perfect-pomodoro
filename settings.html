@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Perfect Pomodoro</title>
+    <link rel="stylesheet" href="settings-styles.css">
+</head>
+<body>
+    <div class="settings-container">
+        <header class="settings-header">
+            <h1>⚙️ Settings</h1>
+            <div class="header-controls">
+                <button id="resetBtn" class="btn danger">Reset to Default</button>
+                <button id="applyBtn" class="btn primary">Apply Changes</button>
+            </div>
+        </header>
+
+        <div class="settings-content">
+            <div class="settings-section">
+                <h2>🎨 Theme & Colors</h2>
+
+                <div class="setting-group">
+                    <label>Theme Preset:</label>
+                    <select id="themePreset" class="setting-input">
+                        <option value="default">Default Purple</option>
+                        <option value="ocean">Ocean Blue</option>
+                        <option value="forest">Forest Green</option>
+                        <option value="sunset">Sunset Orange</option>
+                        <option value="midnight">Midnight Dark</option>
+                        <option value="cherry">Cherry Pink</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+
+                <div class="color-section">
+                    <div class="color-group">
+                        <label>Primary Background:</label>
+                        <input type="color" id="primaryColor" class="color-input" value="#667eea">
+                        <span class="color-value">#667eea</span>
+                    </div>
+
+                    <div class="color-group">
+                        <label>Secondary Background:</label>
+                        <input type="color" id="secondaryColor" class="color-input" value="#764ba2">
+                        <span class="color-value">#764ba2</span>
+                    </div>
+
+                    <div class="color-group">
+                        <label>Break Theme Primary:</label>
+                        <input type="color" id="breakPrimary" class="color-input" value="#f093fb">
+                        <span class="color-value">#f093fb</span>
+                    </div>
+
+                    <div class="color-group">
+                        <label>Break Theme Secondary:</label>
+                        <input type="color" id="breakSecondary" class="color-input" value="#f5576c">
+                        <span class="color-value">#f5576c</span>
+                    </div>
+
+                    <div class="color-group">
+                        <label>Accent Color:</label>
+                        <input type="color" id="accentColor" class="color-input" value="#4CAF50">
+                        <span class="color-value">#4CAF50</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h2>🖼️ UI Customization</h2>
+
+                <div class="setting-group">
+                    <label>Timer Font Size:</label>
+                    <input type="range" id="timerFontSize" min="32" max="64" value="42" class="range-input">
+                    <span class="range-value">42px</span>
+                </div>
+
+                <div class="setting-group">
+                    <label>Window Opacity:</label>
+                    <input type="range" id="windowOpacity" min="0.7" max="1" step="0.05" value="1" class="range-input">
+                    <span class="range-value">100%</span>
+                </div>
+
+                <div class="setting-group">
+                    <label>Border Radius:</label>
+                    <input type="range" id="borderRadius" min="5" max="25" value="15" class="range-input">
+                    <span class="range-value">15px</span>
+                </div>
+
+                <div class="setting-group">
+                    <label>Blur Intensity:</label>
+                    <input type="range" id="blurIntensity" min="0" max="20" value="10" class="range-input">
+                    <span class="range-value">10px</span>
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="enableAnimations" checked>
+                        <span class="checkmark"></span>
+                        Enable Animations
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showSeconds" checked>
+                        <span class="checkmark"></span>
+                        Show Seconds in Timer
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h2>🔊 Sound & Notifications</h2>
+
+                <div class="setting-group">
+                    <label>Notification Sound:</label>
+                    <div class="sound-controls">
+                        <select id="soundTheme" class="setting-input sound-select">
+                            <option value="default">Default Beep</option>
+                            <option value="chime">Soft Chime</option>
+                            <option value="bell">Bell</option>
+                            <option value="none">Silent</option>
+                        </select>
+                        <button id="testSoundBtn" class="btn secondary small">🔊 Test</button>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label>Sound Volume:</label>
+                    <input type="range" id="soundVolume" min="0" max="100" value="50" class="range-input">
+                    <span class="range-value">50%</span>
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="enableNotifications" checked>
+                        <span class="checkmark"></span>
+                        Desktop Notifications
+                    </label>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h2>👀 Live Preview</h2>
+                <div class="preview-container">
+                    <div class="preview-timer">
+                        <div class="preview-time">25:00</div>
+                        <div class="preview-session">Work Session</div>
+                        <div class="preview-name">Sample Task</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="settings-renderer.js"></script>
+</body>
+</html>
