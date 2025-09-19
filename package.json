@@ -2,7 +2,14 @@
   "name": "pomodoro-timer",
   "version": "1.0.0",
   "description": "A beautiful and customizable Pomodoro timer for productivity",
-  "homepage": "https://github.com/user/pomodoro-timer",
+  "homepage": "https://github.com/yourusername/pomodoro-timer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/pomodoro-timer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/pomodoro-timer/issues"
+  },
   "author": "",
   "main": "main.js",
   "scripts": {
