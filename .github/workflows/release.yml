@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*.*.*'  # Triggers on version tags like v1.0.0, v1.2.3, etc.
 
+permissions:
+  contents: write  # Required for creating releases and uploading assets
+
 jobs:
   build-linux:
     runs-on: ubuntu-latest
