@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.hackerapps.PerfectPomodoro</id>
+  <name>Perfect Pomodoro Timer</name>
+  <summary>A beautiful and customizable Pomodoro timer for productivity</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <description>
+    <p>
+      Perfect Pomodoro Timer is a beautiful desktop application that helps you boost productivity
+      using the proven Pomodoro Technique. With customizable work and break sessions, multiple
+      stunning themes, and seamless system integration, it's the perfect tool for focused work.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Customizable work (25min), short break (5min), and long break (15min) durations</li>
+      <li>Multiple beautiful themes: Default, Forest, Ocean, Sunset, Cherry, Midnight</li>
+      <li>Desktop notifications for session transitions</li>
+      <li>System tray integration with quick controls</li>
+      <li>Session history tracking and productivity statistics</li>
+      <li>Auto-advancing sessions with proper Pomodoro cycle logic</li>
+      <li>Visual progress tracking with theme-based colors</li>
+      <li>Comprehensive settings management</li>
+    </ul>
+    <p>
+      The Pomodoro Technique is a time management method that uses a timer to break work into
+      intervals, traditionally 25 minutes in length, separated by short breaks. This app makes
+      it easy to follow the technique with its intuitive interface and helpful features.
+    </p>
+  </description>
+
+  <categories>
+    <category>Office</category>
+    <category>Utility</category>
+  </categories>
+
+  <keywords>
+    <keyword>pomodoro</keyword>
+    <keyword>timer</keyword>
+    <keyword>productivity</keyword>
+    <keyword>focus</keyword>
+    <keyword>time management</keyword>
+    <keyword>work</keyword>
+    <keyword>break</keyword>
+  </keywords>
+
+  <url type="homepage">https://github.com/AnalogGhost/perfect-pomodoro</url>
+  <url type="bugtracker">https://github.com/AnalogGhost/perfect-pomodoro/issues</url>
+  <url type="help">https://github.com/AnalogGhost/perfect-pomodoro/blob/main/README.md</url>
+  <url type="vcs-browser">https://github.com/AnalogGhost/perfect-pomodoro</url>
+
+  <developer_name>Matt Brown</developer_name>
+  <update_contact>perfect-pomodoro@hackerapps.com</update_contact>
+
+  <launchable type="desktop-id">com.hackerapps.PerfectPomodoro.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Main timer interface with Forest theme</caption>
+      <image>https://raw.githubusercontent.com/AnalogGhost/perfect-pomodoro/main/screenshots/main-interface.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Multiple beautiful themes to choose from</caption>
+      <image>https://raw.githubusercontent.com/AnalogGhost/perfect-pomodoro/main/screenshots/themes.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Settings panel for customization</caption>
+      <image>https://raw.githubusercontent.com/AnalogGhost/perfect-pomodoro/main/screenshots/settings.png</image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="1.0.0" date="2024-09-19">
+      <description>
+        <p>Initial release of Perfect Pomodoro Timer with all core features:</p>
+        <ul>
+          <li>Complete Pomodoro timer implementation with work/break cycles</li>
+          <li>Six beautiful themes with gradient designs</li>
+          <li>System tray integration and desktop notifications</li>
+          <li>Session history tracking and statistics</li>
+          <li>Comprehensive settings management</li>
+          <li>Cross-platform support (Linux, Windows, macOS)</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+
+  <content_rating type="oars-1.1" />
+</component>

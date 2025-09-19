@@ -1,0 +1,7 @@
+[
+  {
+    "type": "file",
+    "url": "data:application/json;base64,e30K",
+    "dest": "package-lock.json"
+  }
+]

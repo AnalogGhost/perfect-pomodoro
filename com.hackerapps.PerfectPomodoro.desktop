@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Perfect Pomodoro Timer
+Comment=A beautiful and customizable Pomodoro timer for productivity
+Exec=perfect-pomodoro
+Icon=com.hackerapps.PerfectPomodoro
+Type=Application
+Categories=Office;Utility;
+Keywords=pomodoro;timer;productivity;focus;
+StartupNotify=true
+StartupWMClass=perfect-pomodoro

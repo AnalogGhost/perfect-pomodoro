@@ -1,0 +1,57 @@
+app-id: com.hackerapps.PerfectPomodoro
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+base: org.electronjs.Electron2.BaseApp
+base-version: '23.08'
+command: perfect-pomodoro
+separate-locales: false
+
+finish-args:
+  # X11 + XShm access
+  - --socket=x11
+  - --share=ipc
+  # Wayland access
+  - --socket=wayland
+  # Audio access for notifications
+  - --socket=pulseaudio
+  # Network access (for potential future features)
+  - --share=network
+  # System tray access
+  - --talk-name=org.kde.StatusNotifierWatcher
+  - --talk-name=org.freedesktop.Notifications
+  # File system access for settings
+  - --persist=.config/perfect-pomodoro
+
+modules:
+  - name: perfect-pomodoro
+    buildsystem: simple
+    build-options:
+      # Tell npm to cache in the build directory
+      env:
+        npm_config_cache: /run/build/perfect-pomodoro/npm-cache
+        npm_config_offline: 'true'
+    build-commands:
+      # Install dependencies
+      - npm ci --cache=/run/build/perfect-pomodoro/npm-cache
+      # Build the application
+      - npm run build-linux
+      # Install into the Flatpak
+      - install -Dm755 dist/linux-unpacked/perfect-pomodoro $FLATPAK_DEST/bin/perfect-pomodoro
+      - cp -r dist/linux-unpacked/resources $FLATPAK_DEST/bin/
+      - cp -r dist/linux-unpacked/locales $FLATPAK_DEST/bin/
+      # Install desktop file
+      - install -Dm644 com.hackerapps.PerfectPomodoro.desktop $FLATPAK_DEST/share/applications/com.hackerapps.PerfectPomodoro.desktop
+      # Install icons
+      - install -Dm644 assets/icon.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/com.hackerapps.PerfectPomodoro.png
+      - install -Dm644 assets/icon-128.png $FLATPAK_DEST/share/icons/hicolor/128x128/apps/com.hackerapps.PerfectPomodoro.png
+      - install -Dm644 assets/icon-64.png $FLATPAK_DEST/share/icons/hicolor/64x64/apps/com.hackerapps.PerfectPomodoro.png
+      - install -Dm644 assets/icon-32.png $FLATPAK_DEST/share/icons/hicolor/32x32/apps/com.hackerapps.PerfectPomodoro.png
+      # Install metadata
+      - install -Dm644 com.hackerapps.PerfectPomodoro.metainfo.xml $FLATPAK_DEST/share/metainfo/com.hackerapps.PerfectPomodoro.metainfo.xml
+    sources:
+      - type: archive
+        url: https://github.com/AnalogGhost/perfect-pomodoro/archive/refs/tags/v1.0.0.tar.gz
+        sha256: 98c6b2c878e02c6bcfc27ad8331fa35f79b3250492a93697c4f62b3cff32b27e
+      # Include generated sources for offline npm install
+      - generated-sources.json
