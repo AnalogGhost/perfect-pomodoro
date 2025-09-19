@@ -2,15 +2,15 @@
   "name": "pomodoro-timer",
   "version": "1.0.0",
   "description": "A beautiful and customizable Pomodoro timer for productivity",
-  "homepage": "https://github.com/yourusername/pomodoro-timer",
+  "homepage": "https://github.com/AnalogGhost/pomodoro-timer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/pomodoro-timer.git"
+    "url": "https://github.com/AnalogGhost/pomodoro-timer.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/pomodoro-timer/issues"
+    "url": "https://github.com/AnalogGhost/pomodoro-timer/issues"
   },
-  "author": "",
+  "author": "Matt Brown <perfect-pomodoro@hackerapps.com>",
   "main": "main.js",
   "scripts": {
     "start": "electron . --no-sandbox",
