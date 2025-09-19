@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    color: white;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px 20px 30px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.timer-display {
+    text-align: center;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.time {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.session-type {
+    font-size: 16px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.session-name {
+    font-size: 14px;
+    opacity: 0.9;
+    font-style: italic;
+    color: #e8f4fd;
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn.primary {
+    background: #a855f7;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #9333ea;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.settings {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+}
+
+.setting-group {
+    margin-bottom: 12px;
+}
+
+.setting-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.setting-group input, .setting-group select {
+    width: 100%;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+}
+
+.setting-group input:focus, .setting-group select:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.setting-group select option {
+    background: #764ba2;
+    color: white;
+}
+
+.setting-group {
+    position: relative;
+}
+
+.setting-group .button-group {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.btn.small {
+    padding: 5px 10px;
+    font-size: 12px;
+    flex: 1;
+}
+
+.progress {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.session-counter {
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #a855f7;
+    transition: width 1s ease;
+    border-radius: 4px;
+}
+
+.work-session {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+}
+
+.break-session {
+    background: linear-gradient(135deg, #c084fc 0%, #d946ef 100%);
+}
+
+.break-session .progress-fill {
+    background: #FF6B6B;
+}
+
+.action-section {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

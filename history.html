@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session History - Perfect Pomodoro</title>
+    <link rel="stylesheet" href="history-styles.css">
+</head>
+<body>
+    <div class="history-container">
+        <header class="history-header">
+            <h1>📊 Session History</h1>
+            <div class="history-controls">
+                <button id="exportJsonBtn" class="btn secondary">Export JSON</button>
+                <button id="exportCsvBtn" class="btn secondary">Export CSV</button>
+                <button id="clearHistoryBtn" class="btn danger">Clear All</button>
+                <button id="refreshBtn" class="btn primary">Refresh</button>
+            </div>
+        </header>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number" id="totalSessions">0</div>
+                <div class="stat-label">Total Sessions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalTime">0h</div>
+                <div class="stat-label">Total Time</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="avgSession">0min</div>
+                <div class="stat-label">Avg Session</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="todaySessions">0</div>
+                <div class="stat-label">Today</div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <input type="date" id="dateFilter" class="date-filter">
+            <input type="text" id="nameFilter" placeholder="Filter by session name..." class="name-filter">
+            <button id="clearFilters" class="btn secondary small">Clear Filters</button>
+        </div>
+
+        <div class="history-content">
+            <div id="historyTable" class="history-table">
+                <div class="table-header">
+                    <div class="col-name">Session Name</div>
+                    <div class="col-date">Date</div>
+                    <div class="col-time">Time</div>
+                    <div class="col-duration">Duration</div>
+                    <div class="col-planned">Planned</div>
+                </div>
+                <div id="historyList" class="table-body">
+                    <div class="no-history">No completed sessions yet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="history-renderer.js"></script>
+</body>
+</html>

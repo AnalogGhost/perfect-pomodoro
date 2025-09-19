@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Pomodoro Timer
+Comment=Perfect Pomodoro Timer - Desktop productivity app
+Exec=/home/ghost/Code/pomodoro-timer/node_modules/.bin/electron /home/ghost/Code/pomodoro-timer --no-sandbox
+Icon=/home/ghost/Code/pomodoro-timer/assets/icon.png
+Type=Application
+Categories=Utility;Office;
+StartupNotify=true
+StartupWMClass=pomodoro-timer
