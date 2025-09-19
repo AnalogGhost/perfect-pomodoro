@@ -58,12 +58,21 @@ jobs:
     - name: Install Wine for Windows builds
       run: |
         sudo apt update
-        sudo apt install -y wine64
+        sudo dpkg --add-architecture i386
+        sudo apt update
+        sudo apt install -y wine64 wine32 xvfb
+
+    - name: Configure Wine and X11
+      run: |
+        export DISPLAY=:99
+        Xvfb :99 -ac -screen 0 1024x768x8 &
+        wine --version
 
     - name: Build Windows packages
       run: npm run build-windows
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        DISPLAY: :99
 
     - name: Upload Windows artifacts
       uses: actions/upload-artifact@v4
