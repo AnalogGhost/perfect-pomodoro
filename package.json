@@ -33,7 +33,7 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "chokidar": "^4.0.3",
-    "electron": "^38.1.2",
+    "electron": "^39.8.10",
     "electron-builder": "^26.0.12",
     "png2icons": "^2.0.1"
   },
@@ -115,5 +115,8 @@
   },
   "dependencies": {
     "canvas": "^3.2.0"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "^0.9.10"
   }
 }
