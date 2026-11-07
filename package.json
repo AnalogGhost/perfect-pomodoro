@@ -33,7 +33,7 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "chokidar": "^4.0.3",
-    "electron": "^39.8.10",
+    "electron": "^42.11.16",
     "electron-builder": "^26.0.12",
     "png2icons": "^2.0.1"
   },
